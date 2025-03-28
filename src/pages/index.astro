@@ -1,0 +1,53 @@
+---
+import SectionContainer from "@components/SectionContainer.astro";
+import Hero from "@components/Hero.astro";
+import Stack from "@components/Stack.astro";
+import RootLayout from "@layouts/RootLayout.astro";
+import Proyects from "@components/Proyects.astro";
+import Subtitle from "@components/Subtitle.astro";
+import Text from "@components/Text.astro";
+import ListItem from "@components/ListItem.astro";
+---
+
+<!--  -->
+<RootLayout
+  title="Berny Abreu - Desarrollador y Programador Web con +3 años de experiencia"
+  description="I specialize in building attractive and functional interfaces that	provide users with a memorable experience. Explore my projects and discover how I can contribute to your next technological challenge!"
+>
+  <main class="px-4">
+    <SectionContainer id="stack" class="py-16 md:py-20">
+      <Hero />
+      <Stack />
+    </SectionContainer>
+
+    <div class="space-y-24">
+      <SectionContainer id="proyectos">
+        <Proyects />
+      </SectionContainer>
+      <SectionContainer id="sobre-mi">
+        <Subtitle>Experiencia</Subtitle>
+        <Text>
+          Durante los últimos años he trabajado en diversos proyectos para
+          clientes del sector privado e institucional, desempeñándome como
+          desarrollador frontend. He desarrollado soluciones web y móviles que
+          incluyen aplicaciones de ventas, sistemas POS, eCommerce y plataformas
+          de automatización documental, siempre enfocado en la calidad visual,
+          el rendimiento y la experiencia del usuario. Mi trabajo se caracteriza
+          por la integración eficiente con APIs externas, el uso de tecnologías
+          modernas y la entrega de interfaces adaptadas a cualquier dispositivo.
+        </Text>
+        <Subtitle>Educación</Subtitle>
+        <ul class="relative border-l border-gray-700 pl-6">
+          <ListItem
+            title="Ingeniería en Sistemas y Computación"
+            description="Universidad O&M, República Dominicana"
+          />
+          <ListItem
+            title="Formación continua"
+            description="Formación continua como autodidacta en desarrollo web frontend y backend"
+          />
+        </ul>
+      </SectionContainer>
+    </div>
+  </main>
+</RootLayout>

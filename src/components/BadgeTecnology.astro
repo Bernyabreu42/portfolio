@@ -1,0 +1,17 @@
+---
+const { technologies } = Astro.props;
+---
+
+{
+  technologies?.map((tec: any) => {
+    const RenderIcon = tec.icon;
+    return (
+      <li
+        class={`flex items-center ${tec.color} p-1 rounded-md gap-1 touch-none pointer-events-none px-3`}
+      >
+        {RenderIcon && <RenderIcon class="size-5" />}
+        <span class={`text-sm font-bold`}>{tec.name}</span>
+      </li>
+    );
+  })
+}

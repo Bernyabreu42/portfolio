@@ -1,0 +1,38 @@
+---
+import Sendemail from "./icons/Sendemail.astro";
+import LinkButton from "./LinkButton.astro";
+import Text from "./Text.astro";
+---
+
+<div class="text-white font-sans pt-5 space-y-3 flex flex-col w-full p-5">
+  <div class="flex flex-col gap-3">
+    <li
+      class={`flex items-center bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent  rounded-md `}
+    >
+      <span class={`text-xs font-bold`}>+3 años de experiencia</span>
+    </li>
+    <h2
+      class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
+    >
+      Berny Abreu
+    </h2>
+    <h1
+      class="sm:text-[48px] text-3xl font-bold bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent pb-3"
+    >
+      Software Engineer
+    </h1>
+  </div>
+
+  <Text>
+    Me especializo en construir interfaces atractivas y funcionales que ofrecen
+    a los usuarios una experiencia memorable. ¡Explora mis proyectos y descubre
+    cómo puedo contribuir a tu próximo desafío tecnológico!
+  </Text>
+
+  <div>
+    <LinkButton href="mailto:bernyabreu42@gmail.com">
+      <Sendemail class="size-4" />
+      Contáctame
+    </LinkButton>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+---
+import CardProyect from "@components/CardProyect.astro";
+import SectionContainer from "@components/SectionContainer.astro";
+import RootLayout from "@layouts/RootLayout.astro";
+import { projects } from "@lib/proyects";
+---
+
+<RootLayout
+  title="Berny Abreu - Proyectos"
+  description="I specialize in building attractive and functional interfaces that	provide users with a memorable experience. Explore my projects and discover how I can contribute to your next technological challenge!"
+>
+  <main class="px-4">
+    <SectionContainer class="py-16 md:py-20">
+      <div class="flex flex-col pt-6 divide-y divide-slate-700">
+        {projects.map((proyect) => <CardProyect proyect={proyect} />)}
+      </div>
+    </SectionContainer>
+  </main>
+</RootLayout>

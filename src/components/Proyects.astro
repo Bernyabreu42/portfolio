@@ -1,0 +1,18 @@
+---
+import CardProyect from "./CardProyect.astro";
+import Arrowright from "./icons/Arrowright.astro";
+import LinkButton from "./LinkButton.astro";
+import Subtitle from "./Subtitle.astro";
+import { projects } from "@lib/proyects";
+---
+
+<Subtitle>Proyectos</Subtitle>
+<div class="flex flex-col pt-6 divide-y divide-slate-700">
+  {projects.slice(0, 2).map((proyect) => <CardProyect proyect={proyect} />)}
+</div>
+<div class="p-5 flex items-center justify-center">
+  <LinkButton href="/proyectos">
+    Ver más proyectos
+    <Arrowright class="size-5" />
+  </LinkButton>
+</div>

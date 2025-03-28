@@ -1,0 +1,124 @@
+---
+import Css3 from "./icons/Css3.astro";
+import Git from "./icons/Git.astro";
+import Github from "./icons/Github.astro";
+import Html from "./icons/Html.astro";
+import Javascript from "./icons/Javascript.astro";
+import Mongodb from "./icons/Mongodb.astro";
+import Mysql from "./icons/Mysql.astro";
+import Nextjs from "./icons/Nextjs.astro";
+import Nodejs from "./icons/Nodejs.astro";
+import ReactIcon from "./icons/ReactIcon.astro";
+import Tailwindcss from "./icons/Tailwindcss.astro";
+import Typescript from "./icons/Typescript.astro";
+
+const listStacks = [
+	{
+		name: "Html",
+		svg: Html,
+		color:
+			"grayscale group-hover:grayscale-0 group-hover:border-[#e65100] group-hover:bg-[#e65100]/30",
+		textColor: "text-gray-600 group-hover:text-[#e65100] font-bold",
+	},
+	{
+		name: "CSS3",
+		svg: Css3,
+		color:
+			"grayscale group-hover:grayscale-0 group-hover:border-[#038ad2] group-hover:bg-[#038ad2]/30",
+		textColor: "text-gray-600 group-hover:text-[#038ad2] font-bold",
+	},
+	{
+		name: "Tailwind",
+		svg: Tailwindcss,
+		color:
+			"grayscale group-hover:grayscale-0 group-hover:border-[#00acc1] group-hover:bg-[#00acc1]/30",
+		textColor: "text-gray-600 group-hover:text-[#00acc1] font-bold",
+	},
+	{
+		name: "JavaScript",
+		svg: Javascript,
+		color:
+			"grayscale group-hover:grayscale-0 group-hover:border-[#ffd600] group-hover:bg-[#ffd600]/30",
+		textColor: "text-gray-600 group-hover:text-[#ffd600] font-bold",
+	},
+	{
+		name: "TypeScript",
+		svg: Typescript,
+		color:
+			"grayscale group-hover:grayscale-0 group-hover:border-[#1a94ea] group-hover:bg-[#1a94ea]/30",
+		textColor: "text-gray-600 group-hover:text-[#1a94ea] font-bold",
+	},
+	{
+		name: "React",
+		svg: ReactIcon,
+		color:
+			"grayscale group-hover:grayscale-0 group-hover:border-[#80deea] group-hover:bg-[#80deea]/30",
+		textColor: "text-gray-600 group-hover:text-[#80deea] font-bold",
+	},
+	{
+		name: "Next.js",
+		svg: Nextjs,
+		color:
+			"grayscale group-hover:grayscale-0 group-hover:border-[#cccbaba] group-hover:bg-[#cccbaba]/30",
+		textColor: "text-gray-600 group-hover:text-white font-bold",
+	},
+	{
+		name: "Node.js",
+		svg: Nodejs,
+		color:
+			"grayscale group-hover:grayscale-0 group-hover:border-[#21a366] group-hover:bg-[#21a366]/30",
+		textColor: "text-gray-600 group-hover:text-[#21a366] font-bold",
+	},
+	{
+		name: "MySQL",
+		svg: Mysql,
+		color:
+			"grayscale group-hover:grayscale-0 group-hover:border-[#2e7ad5] group-hover:bg-[#2e7ad5]/30",
+		textColor: "text-gray-600 group-hover:text-[#2e7ad5] font-bold",
+	},
+	{
+		name: "MongoDB",
+		svg: Mongodb,
+		color:
+			"grayscale group-hover:grayscale-0 group-hover:border-[#4caf50] group-hover:bg-[#4caf50]/30",
+		textColor: "text-gray-600 group-hover:text-[#4caf50] font-bold",
+	},
+	{
+		name: "Git",
+		svg: Git,
+		color:
+			"grayscale group-hover:grayscale-0 group-hover:border-[#f4511e] group-hover:bg-[#f4511e]/30",
+		textColor: "text-gray-600 group-hover:text-[#f4511e] font-bold",
+	},
+	{
+		name: "Github",
+		svg: Github,
+		color:
+			"grayscale group-hover:grayscale-0 group-hover:border-[#cccbaba] group-hover:bg-[#cccbaba]/30",
+		textColor:
+			"text-gray-600 group-hover:text-gray-400  group-hover:dark:text-white font-bold",
+	},
+];
+---
+
+<span
+	class="ml-5 bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent mt-10 text-xl font-bold"
+	>Mi Stack</span
+>
+<div class="grid grid-cols-[repeat(auto-fit,_minmax(75px,_1fr))] gap-5 pt-6">
+	{
+		listStacks.map((stack) => {
+			const RenderIcon = stack.svg
+			return (
+				<div class="group flex flex-col items-center ">
+					<button
+						class={`border-4 border-gray-600 bg-gray-700 p-1 rounded-full flex items-center justify-center transition ${stack.color}`}
+					>
+					<RenderIcon class="size-10"/>
+					</button>
+					<span class={stack.textColor}>{stack.name}</span>
+				</div>
+			);
+		})
+	}
+</div>

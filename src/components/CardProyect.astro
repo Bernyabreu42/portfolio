@@ -1,0 +1,32 @@
+---
+import BadgeTecnology from "./BadgeTecnology.astro";
+import LinkButton from "./LinkButton.astro";
+import Arrowright from "@components/icons/Arrowright.astro";
+
+const { proyect } = Astro.props;
+const { title, description, technologies, features, portada, link, id } =
+  proyect;
+---
+
+<div class="grid grid-col-1 md:grid-cols-2 gap-3 py-6">
+  <img
+    transition:name={title}
+    src={portada}
+    alt={title}
+    class="rounded-md w-full h-[200px] md:h-[250px] gap-5 aspect-square shadow border border-slate-700 dark:border-gray-800"
+  />
+
+  <article class="flex flex-col gap-1">
+    <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+      {title}
+    </h3>
+    <ul class="flex gap-1 flex-wrap pb-5">
+      <BadgeTecnology technologies={technologies} />
+    </ul>
+    <!-- <span class=" text-gray-700 dark:text-gray-400">{description}</span> -->
+    <LinkButton href={`/proyectos/${id}`}>
+      Ver más
+      <Arrowright class="size-5" />
+    </LinkButton>
+  </article>
+</div>
